@@ -14,7 +14,7 @@ gpu_stats=$(< $GPU_STATS_JSON)
  
  #Update
  cd ~/JettonGramGpuMiner
- git pull
+ #git pull
  
 #Start miner
 npm install

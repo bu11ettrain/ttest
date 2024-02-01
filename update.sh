@@ -17,7 +17,7 @@ gpu_stats=$(< $GPU_STATS_JSON)
  git pull
  
 #Start miner
-
+npm install
 gpu_stats=$(< $GPU_STATS_JSON)
 	readarray -t gpu_stats < <( jq --slurp -r -c '.[] | .busids, .brand, .temp, .fan | join(" ")' $GPU_STATS_JSON 2>/dev/null)
 	busids=(${gpu_stats[0]})

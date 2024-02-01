@@ -26,6 +26,6 @@ gpu_stats=$(< $GPU_STATS_JSON)
 
 	for(( i=0; i < gpu_count; i++ )); do
 		echo Mining on GPU $i has been started
-		screen -dmS gram_$i bash -c "while true; do node ~/JettonGramGpuMiner/send_universal.js --api tonhub --givers 10000 --timeout 8 --bin ~/JettonGramGpuMiner/pow-miner-cuda --gpu $i; sleep 1; done"
+		screen -dmS gram_$i bash -c "while true; do node ~/JettonGramGpuMiner/send_universal.js --api tonhub --givers 1000 --timeout 8 --bin ~/JettonGramGpuMiner/pow-miner-cuda --gpu $i; sleep 1; done"
 	done
  screen -ls
